@@ -1,9 +1,5 @@
 
-
 version: 0.2
-
-
-
 phases:
   pre_build:
     commands:
@@ -24,7 +20,7 @@ phases:
       - echo Pushing the Docker image...
       - docker push 614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeejs:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"node-container","imageUri":"614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeejs"}]' 614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeees > imagedefinitions.json
+      - printf '[{"name":"node-container","imageUri":"614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeejs"}]' 614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeejs > imagedefinitions.json
 
 artifacts:
     files:

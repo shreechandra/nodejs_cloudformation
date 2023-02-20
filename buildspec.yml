@@ -1,5 +1,3 @@
-
-
 version: 0.2
 
 
@@ -14,16 +12,16 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t nodeejs .
-      - docker tag nodeees:latest 614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeejs:latest
+      - docker build -t nodeees .
+      - docker tag nodeees:latest 614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeees:latest
      
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeejs:latest
+      - docker push 614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeees:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"node-container","imageUri":"614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeejs"}]' 614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeejs > imagedefinitions.json
+      - printf '[{"name":"node-container","imageUri":"614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeees"}]' 614694465844.dkr.ecr.ap-south-1.amazonaws.com/nodeees > imagedefinitions.json
 
 artifacts:
     files:

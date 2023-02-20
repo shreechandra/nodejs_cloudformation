@@ -5,6 +5,6 @@ app.get('/', (req, res) => {
   res.send('Node Js ');
 });
 
-app.listen(3000, () => {
+app.listen(80, () => {
   console.log('Server running on port 3000');
 });
